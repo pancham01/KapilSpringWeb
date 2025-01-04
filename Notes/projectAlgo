@@ -1,0 +1,41 @@
+1-> Create Dynamic web project.
+2--> Convert it into Maven project(Go to configure and click on convert to mvn project).
+3--> Add (Spring web mvc) Dependency into pom.xml.
+4--> servlet mapping into the deployment descriptor file(web.xml)
+(
+
+	<servlet>
+		<servlet-name>firstservlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>firstservlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+).
+
+5--> Create a springmvc bean file with the name of reqName-servlet.xml.
+6--> Go to the browser search (green bean getting started spring mvc) and copy the servlet.xml file.
+7--> create a controller class into a package.
+(
+@Controller
+public class WelcomeController {
+
+	@RequestMapping("/")
+	public String greet() {
+		System.out.println("WelcomeController.greet()");
+		return "/WEB-INF/welcome.jsp";
+	}
+
+}
+).
+8--> Enter your base package name into the servlet.xml file.
+
+
+
+
+
+
+YOU WILL FACE THIS ERROR -->(java.lang.ClassNotFoundException: jakarta.servlet.http.HttpServlet) WHEN you choose tomcat version below tomcat 10
