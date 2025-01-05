@@ -1,6 +1,15 @@
 1-> Create Dynamic web project.
+
+
+
 2--> Convert it into Maven project(Go to configure and click on convert to mvn project).
+
+
+
 3--> Add (Spring web mvc) Dependency into pom.xml.
+
+
+
 4--> servlet mapping into the deployment descriptor file(web.xml)
 (
 
@@ -16,8 +25,16 @@
 
 ).
 
+
+
 5--> Create a springmvc bean file with the name of reqName-servlet.xml.
+
+
+
 6--> Go to the browser search (green bean getting started spring mvc) and copy the servlet.xml file.
+
+
+
 7--> create a controller class into a package.
 (
 @Controller
@@ -31,6 +48,10 @@ public class WelcomeController {
 
 }
 ).
+
+
+
+
 8--> Enter your base package name into the servlet.xml file.
 
 
