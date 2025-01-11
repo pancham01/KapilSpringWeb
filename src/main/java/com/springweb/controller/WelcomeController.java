@@ -2,6 +2,7 @@ package com.springweb.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class WelcomeController {
@@ -13,8 +14,8 @@ public class WelcomeController {
 	}
 
 	@RequestMapping("/hello")
-	public String message() {
-		System.out.println("WelcomeController.message()");
+	public String message(@RequestParam(name = "user",defaultValue = "Default value...") String name) {
+		System.out.println("WelcomeController.message()   "+name);
 		return "index";
 	}
 
