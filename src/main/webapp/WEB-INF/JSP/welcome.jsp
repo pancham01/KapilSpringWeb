@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>HELLO THIS IS MY FIRST RESPONSE TO CLIENT</h1>
+<h1>HELLO THIS IS MY FIRST JAVA BASED RESPONSE TO CLIENT</h1>
 </body>
 </html>
