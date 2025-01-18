@@ -1,32 +1,50 @@
 package com.springweb.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
-    private String name;
-    private String department;
-    private int age;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
-    // Getters and Setters
-    public String getName() {
-        return name;
-    }
+	private String name;
+	private String department;
+	private double salary;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	// Getters and Setters
+	public int getId() {
+		return id;
+	}
 
-    public String getDepartment() {
-        return department;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public int getAge() {
-        return age;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
 }
