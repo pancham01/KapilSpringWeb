@@ -9,7 +9,7 @@ import com.springweb.dao.EmployeeDAO;
 import com.springweb.model.Employee;
 
 @Service
-@Transactional(readOnly = false)
+@Transactional
 public class EmployeeService {
     private final EmployeeDAO employeeDAO;
 
