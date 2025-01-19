@@ -13,7 +13,7 @@ public class WelcomeController {
 	@ResponseBody
 	public String greet() {
 		System.out.println("WelcomeController.greet()");
-		return "welcome to the spring form";
+		return "welcome to the spring orm form";
 	}
 
 	@RequestMapping("/hello")

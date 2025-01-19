@@ -10,10 +10,24 @@ public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-
 	private String name;
 	private String department;
 	private double salary;
+	
+	
+	
+
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee( String name, String department, double salary) {
+		super();
+		this.name = name;
+		this.department = department;
+		this.salary = salary;
+	}
 
 	// Getters and Setters
 	public int getId() {
@@ -47,4 +61,5 @@ public class Employee {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
+	
 }
