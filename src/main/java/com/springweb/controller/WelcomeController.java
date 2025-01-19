@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class WelcomeController {
 
 	@RequestMapping("/")
-	@ResponseBody
+//	@ResponseBody
 	public String greet() {
 		System.out.println("WelcomeController.greet()");
-		return "welcome to the spring form";
+		return "index";
 	}
 
 	@RequestMapping("/hello")
