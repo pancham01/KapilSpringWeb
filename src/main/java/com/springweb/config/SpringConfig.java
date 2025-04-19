@@ -36,9 +36,6 @@ public class SpringConfig implements WebMvcConfigurer {
 		return viewResolver;
 	}
 	
-	
-	
-	
 	@Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
