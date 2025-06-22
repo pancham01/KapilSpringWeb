@@ -18,12 +18,10 @@ public class EmployeeDAO {
         this.hibernateTemplate = hibernateTemplate;
     }
 
-    @Transactional
     public void save(Employee employee) {
         hibernateTemplate.save(employee);
     }
 
-    @Transactional
     public List<Employee> getAllEmployees() {
         return hibernateTemplate.loadAll(Employee.class);
     }
