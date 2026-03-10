@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class WelcomeController {
+public class CookieController {
 
 		@RequestMapping("/")
 		@ResponseBody
