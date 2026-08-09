@@ -2,6 +2,7 @@ package com.springweb.controller;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -28,6 +29,12 @@ public class CookieController {
 			return "Welcome SR.Dev Ji this is your path variable value: "+id;
 		}
 
+		@GetMapping("/createSession")
+		@ResponseBody
+		public String createSession(HttpSession session) {
+			return "Hey User! This is your JSESSIONID: " + session.getId();
+		}
+		
 		@GetMapping("/getCookie")
 		@ResponseBody
 		public String getCookie(@CookieValue("JSESSIONID") String cookie) {
